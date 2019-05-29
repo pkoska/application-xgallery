@@ -1,23 +1,12 @@
-XCarousel
+XGallery
 ==========
 
-* Description: Application that allows users to easily create carousels, while still offering a variety of settings, like auto-sliding(on/off), interval, width, height and background color for the carousel, and for each slide you can set the image and caption text with size, color, link.
-
-* Project Lead: [Paul Panțiru](http://www.xwiki.org/xwiki/bin/view/XWiki/ppantiru)
-
-* [Documentation & download](http://extensions.xwiki.org/xwiki/bin/view/Extension/XCarousel)
-
-* [Issue Tracker](http://jira.xwiki.org/browse/XCAROUSEL)
-
-* Comunication: [Mailing List](http://dev.xwiki.org/xwiki/bin/view/Community/MailingLists), [IRC](http://dev.xwiki.org/xwiki/bin/view/Community/IRC)
+* Description: Application that allows users to easily create galleris, while still offering a variety of settings, like auto-sliding(on/off), interval, width, height and background color for the carousel, and for each slide you can set the image and caption text with size, color, link.
 
 * Minimal XWiki version supported: 6.2.2
 
 * License: LGPL 2.1
 
-* Sonar Dashboard: N/A 
-
-* Continuous Integration Status: N/A 
 
 Usage
 =====
@@ -33,5 +22,4 @@ Create or delete as many slides as you want using "Add new slide/Delete Slide" b
 
 After the setup is done, you can insert the new carousel into any page using the display macro.
 
-ex: `{{xcarousel carousel='Demo'/}}`
-
+ex: `{{xgallery carousel='Demo'/}}`
