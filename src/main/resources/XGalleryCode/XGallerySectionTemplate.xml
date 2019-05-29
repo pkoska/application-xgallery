@@ -21,12 +21,12 @@
 -->
 
 <xwikidoc>
-  <web>XCarouselCode</web>
-  <name>XCarouselSectionTemplate</name>
+  <web>XGalleryCode</web>
+  <name>XGallerySectionTemplate</name>
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
-  <parent>XCarouselCode.XCarouselSectionClass</parent>
+  <parent>XGalleryCode.XGallerySectionClass</parent>
   <creator>xwiki:XWiki.Admin</creator>
   <author>xwiki:XWiki.Admin</author>
   <customClass/>
@@ -35,7 +35,7 @@
   <date>1457361780000</date>
   <contentUpdateDate>1457361779000</contentUpdateDate>
   <version>1.1</version>
-  <title>XCarouselSection Template</title>
+  <title>XGallerySection Template</title>
   <defaultTemplate/>
   <validationScript/>
   <comment/>
@@ -44,7 +44,7 @@
   <hidden>true</hidden>
   <object>
     <class>
-      <name>XCarouselCode.XCarouselSectionClass</name>
+      <name>XGalleryCode.XGallerySectionClass</name>
       <customClass/>
       <customMapping/>
       <defaultViewSheet/>
@@ -175,9 +175,9 @@
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </titleSize>
     </class>
-    <name>XCarouselCode.XCarouselSectionTemplate</name>
+    <name>XGalleryCode.XGallerySectionTemplate</name>
     <number>0</number>
-    <className>XCarouselCode.XCarouselSectionClass</className>
+    <className>XGalleryCode.XGallerySectionClass</className>
     <guid>9a83132e-e760-458f-bc11-bce190373c8a</guid>
     <property>
       <imageURL/>

@@ -21,7 +21,7 @@
 -->
 
 <xwikidoc>
-  <web>XCarousel</web>
+  <web>XGallery</web>
   <name>WebHome</name>
   <language/>
   <defaultLanguage/>
@@ -94,18 +94,18 @@
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </description>
     </class>
-    <name>XCarousel.WebHome</name>
+    <name>XGallery.WebHome</name>
     <number>0</number>
     <className>AppWithinMinutes.LiveTableClass</className>
     <guid>1f72bcd8-78ff-4608-a4e0-f52c6c6aaf1e</guid>
     <property>
-      <class>XCarouselCode.XCarouselClass</class>
+      <class>XGalleryCode.XGalleryClass</class>
     </property>
     <property>
       <columns>doc.name doc.date doc.author autoSliding interval _images _actions</columns>
     </property>
     <property>
-      <description>An easy to use and intuitive carousel app.</description>
+      <description>An easy to use and intuitive gallery app.</description>
     </property>
   </object>
   <object>
@@ -173,7 +173,7 @@
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </scope>
     </class>
-    <name>XCarousel.WebHome</name>
+    <name>XGallery.WebHome</name>
     <number>0</number>
     <className>XWiki.UIExtensionClass</className>
     <guid>65b2a9c8-ea90-4498-afba-8115f8dd08ac</guid>
@@ -184,11 +184,11 @@
       <extensionPointId>org.xwiki.platform.panels.Applications</extensionPointId>
     </property>
     <property>
-      <name>platform.panels.XCarouselApplication</name>
+      <name>platform.panels.XGalleryApplication</name>
     </property>
     <property>
-      <parameters>label=XCarousel
-target=XCarousel.WebHome
+      <parameters>label=XGAllery
+target=XGallery.WebHome
 icon=icon:application</parameters>
     </property>
     <property>
@@ -196,7 +196,7 @@ icon=icon:application</parameters>
     </property>
   </object>
   <content>{{velocity}}
-#set ($discard = $services.localization.use('document', 'XCarouselCode.XCarouselTranslations'))
+#set ($discard = $services.localization.use('document', 'XGalleryCode.XGalleryTranslations'))
 #set ($columnsProperties = {
   'doc.name': {"type":"text","size":10,"link":"view"},
   'doc.date': {"type":"text","size":10},
@@ -207,8 +207,8 @@ icon=icon:application</parameters>
   '_actions': {"sortable":false,"filterable":false,"html":true,"actions":["edit","delete"]}
 })
 #set ($options = {
-  'className': 'XCarouselCode.XCarouselClass',
-  'resultPage': 'XCarouselCode.XCarouselLiveTableResults',
+  'className': 'XGalleryCode.XGalleryClass',
+  'resultPage': 'XGalleryCode.XGalleryLiveTableResults',
   'translationPrefix': 'xcarousel.livetable.',
   'tagCloud': true,
   'rowCount': 15,

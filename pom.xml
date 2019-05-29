@@ -30,22 +30,22 @@
   </parent>
 
   <groupId>org.xwiki.contrib</groupId>
-  <artifactId>application-xcarousel</artifactId>
-  <name>XCarousel</name>
+  <artifactId>application-xgallery</artifactId>
+  <name>XGallery</name>
   <version>1.3-SNAPSHOT</version>
   <packaging>xar</packaging>
   <description>Application that allows users to easily create carousels, while still offering a variety of settings, like auto-sliding(on/off), interval, width, height and background color for the carousel, and for each slide you can set the image and caption text with size, color, link.</description>
   <properties>
     <xwiki.version>6.4</xwiki.version>
     <!-- Name to display by the Extension Manager -->
-    <xwiki.extension.name>XCarousel</xwiki.extension.name>
+    <xwiki.extension.name>XGallery</xwiki.extension.name>
     <!-- Sets value for the categories column on e.x.o -->
     <xwiki.extension.category>application</xwiki.extension.category>
   </properties>
   <scm>
-    <connection>scm:git:git://github.com/xwiki-contrib/application-xcarousel.git</connection>
-    <developerConnection>scm:git:git@github.com:xwiki-contrib/application-xcarousel.git</developerConnection>
-    <url>https://github.com/xwiki-contrib/application-xcarousel.git</url>
+    <connection>scm:git:git://github.com/xwiki-contrib/application-xgallery.git</connection>
+    <developerConnection>scm:git:git@github.com:xwiki-contrib/application-xgallery.git</developerConnection>
+    <url>https://github.com/xwiki-contrib/application-xgallery.git</url>
     <tag>HEAD</tag>
   </scm>
   <developers>

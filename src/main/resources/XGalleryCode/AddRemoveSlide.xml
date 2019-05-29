@@ -21,12 +21,12 @@
 -->
 
 <xwikidoc>
-  <web>XCarouselCode</web>
+  <web>XGalleryCode</web>
   <name>AddRemoveSlide</name>
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
-  <parent>XCarouselClass</parent>
+  <parent>XGalleryClass</parent>
   <creator>xwiki:XWiki.Admin</creator>
   <author>xwiki:XWiki.Admin</author>
   <customClass/>
@@ -114,7 +114,7 @@
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </use>
     </class>
-    <name>XCarouselCode.AddRemoveSlide</name>
+    <name>XGalleryCode.AddRemoveSlide</name>
     <number>0</number>
     <className>XWiki.JavaScriptExtension</className>
     <guid>6ab92c30-cc57-42c7-a234-f9ef37db0d10</guid>
@@ -129,7 +129,7 @@ require(['jquery'], function ($) {
     var Target = $('.listOfSlides');
     var LauncherAdd = $('#GetNewSlide');
     var LauncherDel = $('.RemoveTarget');
-    var AddRemoveSlideUrl = new XWiki.Document('AddRemoveSlide','XCarouselCode').getURL('edit') + '?xpage=get';
+    var AddRemoveSlideUrl = new XWiki.Document('AddRemoveSlide','XGalleryCode').getURL('edit') + '?xpage=get';
     var carouselPageUrl = document.location.pathname;
     var documentName   = xm ? xm.document   : $('meta[name="document"]').attr('content');
     var form_token = xm ? xm.form_token : $('meta[name="form_token"]').attr('content');
@@ -152,7 +152,7 @@ require(['jquery'], function ($) {
 
     //creates an object for a new slide and adds the generated html asynchronously
     function addSection(){
-      var UrlAddParams = { 'xpage': 'editobject', 'xaction' : 'addObject', 'className': 'XCarouselCode.XCarouselSectionClass' };
+      var UrlAddParams = { 'xpage': 'editobject', 'xaction' : 'addObject', 'className': 'XGalleryCode.XGallerySectionClass' };
       $.post( carouselPageUrl, UrlAddParams ).done(function(){
         // the post is done, we can now call dipslayajaxcontent
         $.get( AddRemoveSlideUrl, {'carouselName' : documentName}, function( response, status, xhr ) {
@@ -175,7 +175,7 @@ require(['jquery'], function ($) {
     //delet an object coresponding to the button and section it is used by
     function deleteSection(event){
         var ObjectNo = event.data('objno');  
-        var UrlDelParams = { 'form_token' : form_token, 'classname': 'XCarouselCode.XCarouselSectionClass', 'classid' : ObjectNo};
+        var UrlDelParams = { 'form_token' : form_token, 'classname': 'XGalleryCode.XGallerySectionClass', 'classid' : ObjectNo};
         $.post( deleteUrl, UrlDelParams );
     }
 
@@ -232,7 +232,7 @@ require(['jquery'], function ($) {
     function ajustParamsOfAttSel(){
       var old_fulladdr = $('.justAppended .attachment-picker-start').attr('href');
       var old_addr_parts = old_fulladdr.split('?');
-      var new_querystring = old_addr_parts[1].replace('XCarouselCode.AddRemoveSlide',documentName);
+      var new_querystring = old_addr_parts[1].replace('XGalleryCode.AddRemoveSlide',documentName);
       $('.justAppended .attachment-picker-start').attr('href', old_addr_parts[0] + '?' + new_querystring);
     }
 
@@ -252,9 +252,9 @@ require(['jquery'], function ($) {
     </property>
   </object>
   <content>{{velocity}}
-#set($discard = $services.localization.use('document', 'XCarouselCode.XCarouselTranslations'))
+#set($discard = $services.localization.use('document', 'XGalleryCode.XGalleryTranslations'))
 #set($carouselDoc = $xwiki.getDocument($request.carouselName))
-#set($objects = $carouselDoc.getObjects('XCarouselCode.XCarouselSectionClass'))
+#set($objects = $carouselDoc.getObjects('XGalleryCode.XGallerySectionClass'))
 #set($lastObjectNo =  $objects.size() - 1)
 #set($object = $objects[$lastObjectNo])
 #set($class = $object.xWikiClass)
@@ -267,7 +267,7 @@ require(['jquery'], function ($) {
     {{html}}&lt;input type="hidden" name="objects" value="1"/&gt;{{/html}}
     (% id="AjaxRemoveSlideTarget_${object.number}" class="RemoveTarget" data-objno="${object.number}" %)
     (((
-      {{html clean="false"}}&lt;input class="button RemoveSlide" type="button" value="$services.localization.render('xcarousel.slide_delete')"&gt;{{/html}}
+      {{html clean="false"}}&lt;input class="button RemoveSlide" type="button" value="$services.localization.render('xgallery.slide_delete')"&gt;{{/html}}
     )))
   )))
 (% class="slidePara" %)
@@ -282,7 +282,7 @@ require(['jquery'], function ($) {
       #set($discard = $object.set('textSize', '14px'))
       #set($discard = $carouselDoc.save())
     #end
-    ; $services.localization.render("xcarousel.slide_${prop.prettyName}")
+    ; $services.localization.render("xgallery.slide_${prop.prettyName}")
     : $carouselDoc.display($prop.getName(), "edit", $object)        
   #end
 #end##end foreach class

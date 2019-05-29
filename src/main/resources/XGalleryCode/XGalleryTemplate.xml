@@ -21,12 +21,12 @@
 -->
 
 <xwikidoc>
-  <web>XCarouselCode</web>
-  <name>XCarouselTemplate</name>
+  <web>XGalleryCode</web>
+  <name>XGalleryTemplate</name>
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
-  <parent>XCarouselClass</parent>
+  <parent>XGalleryClass</parent>
   <creator>xwiki:XWiki.Admin</creator>
   <author>xwiki:XWiki.Admin</author>
   <customClass/>
@@ -44,7 +44,7 @@
   <hidden>true</hidden>
   <object>
     <class>
-      <name>XCarouselCode.XCarouselClass</name>
+      <name>XGalleryCode.XGalleryClass</name>
       <customClass/>
       <customMapping/>
       <defaultViewSheet/>
@@ -119,9 +119,9 @@
         <classType>com.xpn.xwiki.objects.classes.NumberClass</classType>
       </interval>
     </class>
-    <name>XCarouselCode.XCarouselTemplate</name>
+    <name>XGalleryCode.XGalleryTemplate</name>
     <number>0</number>
-    <className>XCarouselCode.XCarouselClass</className>
+    <className>XGalleryCode.XGalleryClass</className>
     <guid>d48fe024-1872-4f94-bea2-b661767c35c1</guid>
     <property>
       <autoSliding>1</autoSliding>
@@ -141,7 +141,7 @@
   </object>
   <object>
     <class>
-      <name>XCarouselCode.XCarouselSectionClass</name>
+      <name>XGalleryCode.XGallerySectionClass</name>
       <customClass/>
       <customMapping/>
       <defaultViewSheet/>
@@ -272,9 +272,9 @@
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </titleSize>
     </class>
-    <name>XCarouselCode.XCarouselTemplate</name>
+    <name>XGalleryCode.XGalleryTemplate</name>
     <number>0</number>
-    <className>XCarouselCode.XCarouselSectionClass</className>
+    <className>XGalleryCode.XGallerySectionClass</className>
     <guid>f8eb4d7d-6d95-49d4-a0f9-e3a47a30ba85</guid>
     <property>
       <imageURL/>
@@ -303,7 +303,7 @@
   </object>
   <object>
     <class>
-      <name>XCarouselCode.XCarouselSectionClass</name>
+      <name>XGalleryCode.XGallerySectionClass</name>
       <customClass/>
       <customMapping/>
       <defaultViewSheet/>
@@ -434,9 +434,9 @@
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </titleSize>
     </class>
-    <name>XCarouselCode.XCarouselTemplate</name>
+    <name>XGalleryCode.XGalleryTemplate</name>
     <number>1</number>
-    <className>XCarouselCode.XCarouselSectionClass</className>
+    <className>XGalleryCode.XGallerySectionClass</className>
     <guid>d3339b6d-317f-4505-b3cc-8ac0a5e1b542</guid>
     <property>
       <imageURL/>
@@ -465,7 +465,7 @@
   </object>
   <object>
     <class>
-      <name>XCarouselCode.XCarouselSectionClass</name>
+      <name>XGalleryCode.XGallerySectionClass</name>
       <customClass/>
       <customMapping/>
       <defaultViewSheet/>
@@ -596,9 +596,9 @@
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </titleSize>
     </class>
-    <name>XCarouselCode.XCarouselTemplate</name>
+    <name>XGalleryCode.XGalleryTemplate</name>
     <number>2</number>
-    <className>XCarouselCode.XCarouselSectionClass</className>
+    <className>XGalleryCode.XGallerySectionClass</className>
     <guid>5e5eaaa3-5b7b-4316-9fc8-8743ae0bc556</guid>
     <property>
       <imageURL/>

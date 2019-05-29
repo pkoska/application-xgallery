@@ -21,35 +21,30 @@
 -->
 
 <xwikidoc>
-  <web>XCarouselCode</web>
-  <name>XCarouselSectionSheet</name>
+  <web>XGalleryCode</web>
+  <name>XGalleryLiveTableResults</name>
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
-  <parent>XCarouselCode.XCarouselSectionClass</parent>
+  <parent>XGallery.WebHome</parent>
   <creator>xwiki:XWiki.Admin</creator>
   <author>xwiki:XWiki.Admin</author>
   <customClass/>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <creationDate>1456408556000</creationDate>
-  <date>1457631519000</date>
-  <contentUpdateDate>1457631519000</contentUpdateDate>
+  <creationDate>1456389648000</creationDate>
+  <date>1456389648000</date>
+  <contentUpdateDate>1456389648000</contentUpdateDate>
   <version>1.1</version>
-  <title>#if($doc.name == 'XCarouselSectionSheet')XCarouselSection Sheet#{else}$services.display.title($doc, {'displayerHint': 'default'})#end</title>
+  <title/>
   <defaultTemplate/>
   <validationScript/>
   <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content>{{velocity}}
-## You can modify this page to customize the presentation of your object.
-## At first you should keep the default presentation and just save the document.
+  <content>{{velocity output="false"}}
+$services.localization.use('document', 'XGalleryCode.XGalleryTranslations')
+{{/velocity}}
 
-#set($class = $doc.getObject('XCarouselCode.XCarouselSectionClass').xWikiClass)
-#foreach($prop in $class.properties)
-  ; $prop.prettyName
-  : $doc.display($prop.getName())
-#end
-{{/velocity}}</content>
+{{include reference="XWiki.LiveTableResults" /}}</content>
 </xwikidoc>

@@ -21,12 +21,12 @@
 -->
 
 <xwikidoc version="1.1">
-  <web>XCarouselCode</web>
+  <web>XGalleryCode</web>
   <name>XcarouselMacro</name>
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
-  <parent>XCarousel.WebHome</parent>
+  <parent>XGallery.WebHome</parent>
   <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1458129407000</creationDate>
   <author>xwiki:XWiki.Admin</author>
@@ -41,7 +41,7 @@
   <hidden>true</hidden>
   <content/>
   <object>
-    <name>XCarouselCode.XcarouselMacro</name>
+    <name>XGalleryCode.XcarouselMacro</name>
     <number>0</number>
     <className>XWiki.WikiMacroClass</className>
     <guid>1f86f178-dfe9-4ff9-a80d-b25b358480ac</guid>
@@ -158,7 +158,7 @@
       <code>{{velocity}}
 #set($carousel = "$!xcontext.macro.params.carousel")
 #if ($context.display != 'edit')
-{{display reference="XCarousel.${carousel}" type="document"/}}
+{{display reference="XGallery.${carousel}" type="document"/}}
 #end
 {{/velocity}}</code>
     </property>
@@ -175,10 +175,10 @@
       <description>Display a carousel.</description>
     </property>
     <property>
-      <id>xcarousel</id>
+      <id>xgallery</id>
     </property>
     <property>
-      <name>XCarousel Macro</name>
+      <name>XGallery Macro</name>
     </property>
     <property>
       <supportsInlineMode>1</supportsInlineMode>
@@ -188,7 +188,7 @@
     </property>
   </object>
   <object>
-    <name>XCarouselCode.XcarouselMacro</name>
+    <name>XGalleryCode.XcarouselMacro</name>
     <number>0</number>
     <className>XWiki.WikiMacroParameterClass</className>
     <guid>914fbb8e-ba09-4cf9-b048-ab4a3054cdf6</guid>

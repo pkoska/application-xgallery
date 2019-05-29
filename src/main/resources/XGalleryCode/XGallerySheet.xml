@@ -21,14 +21,14 @@
 -->
 
 <xwikidoc version="1.1">
-  <web>XCarouselCode</web>
-  <name>XCarouselSheet</name>
+  <web>XGalleryCode</web>
+  <name>XGallerySheet</name>
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
   <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1456389326000</creationDate>
-  <parent>XCarouselClass</parent>
+  <parent>XGalleryClass</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1457696971000</date>
@@ -40,11 +40,11 @@
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
   <content>{{velocity }}
-#set ($discard = $doc.use('XCarouselCode.XCarouselClass'))
-#set ($discard = $services.localization.use('document', 'XCarouselCode.XCarouselTranslations'))
-#set ($discard = $xwiki.jsx.use("XCarouselCode.XCarouselSheet"))
-#set ($discard = $xwiki.ssx.use("XCarouselCode.XCarouselSheet", {'docVersion' : "$doc.getVersion()"}))
-#set ($discard = $xwiki.jsx.use("XCarouselCode.AddRemoveSlide"))
+#set ($discard = $doc.use('XGalleryCode.XGalleryClass'))
+#set ($discard = $services.localization.use('document', 'XGalleryCode.XGalleryTranslations'))
+#set ($discard = $xwiki.jsx.use("XGalleryCode.XGallerySheet"))
+#set ($discard = $xwiki.ssx.use("XGalleryCode.XGallerySheet", {'docVersion' : "$doc.getVersion()"}))
+#set ($discard = $xwiki.jsx.use("XGalleryCode.AddRemoveSlide"))
 #set ($discard = $xwiki.linkx.use($services.webjars.url('colpick/2.0.2/css/colpick.css'), {'rel': 'stylesheet'}))
 
   #if ($context.display == 'edit')
@@ -52,14 +52,14 @@
     (((
       {{html wiki="true"}}
         &lt;div id="caruselFormContainer"&gt;
-          ; &lt;label for="XCarouselCode.XCarouselClass_0_autoSliding"&gt;$doc.display('autoSliding')$escapetool.xml($doc.displayPrettyName('autoSliding', false, false))&lt;/label&gt; &lt;span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="$services.localization.render('xcarousel.helper_autoSliding')"&gt;&lt;/span&gt;
-          ; &lt;label for="XCarouselCode.XCarouselClass_0_interval"&gt;$escapetool.xml($doc.displayPrettyName('interval', false, false))&lt;/label&gt; &lt;span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="$services.localization.render('xcarousel.helper_interval')"&gt;&lt;/span&gt;
+          ; &lt;label for="XGalleryCode.XGalleryClass_0_autoSliding"&gt;$doc.display('autoSliding')$escapetool.xml($doc.displayPrettyName('autoSliding', false, false))&lt;/label&gt; &lt;span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="$services.localization.render('xgallery.helper_autoSliding')"&gt;&lt;/span&gt;
+          ; &lt;label for="XGalleryCode.XGalleryClass_0_interval"&gt;$escapetool.xml($doc.displayPrettyName('interval', false, false))&lt;/label&gt; &lt;span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="$services.localization.render('xgallery.helper_interval')"&gt;&lt;/span&gt;
           : &lt;div class="intervalInput"&gt;$doc.display('interval')&lt;/div&gt;
-          ; &lt;label for="XCarouselCode.XCarouselClass_0_carouselWidth"&gt;$escapetool.xml($doc.displayPrettyName('carouselWidth', false, false))&lt;/label&gt; &lt;span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="$services.localization.render('xcarousel.helper_width')"&gt;&lt;/span&gt;
+          ; &lt;label for="XGalleryCode.XGalleryClass_0_carouselWidth"&gt;$escapetool.xml($doc.displayPrettyName('carouselWidth', false, false))&lt;/label&gt; &lt;span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="$services.localization.render('xgallery.helper_width')"&gt;&lt;/span&gt;
           : &lt;div class="widthInput"&gt;$doc.display('carouselWidth')&lt;/div&gt;
-          ; &lt;label for="XCarouselCode.XCarouselClass_0_carouselHeight"&gt;$escapetool.xml($doc.displayPrettyName('carouselHeight', false, false))&lt;/label&gt; &lt;span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="$services.localization.render('xcarousel.helper_height')"&gt;&lt;/span&gt;
+          ; &lt;label for="XGalleryCode.XGalleryClass_0_carouselHeight"&gt;$escapetool.xml($doc.displayPrettyName('carouselHeight', false, false))&lt;/label&gt; &lt;span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="$services.localization.render('xgallery.helper_height')"&gt;&lt;/span&gt;
           : &lt;div class="heightInput"&gt;$doc.display('carouselHeight')&lt;/div&gt;
-          ; &lt;label for="XCarouselCode.XCarouselClass_0_backgroundColor"&gt;$escapetool.xml($doc.displayPrettyName('backgroundColor', false, false))&lt;/label&gt; &lt;span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="$services.localization.render('xcarousel.helper_bgcolor')"&gt;&lt;/span&gt;
+          ; &lt;label for="XGalleryCode.XGalleryClass_0_backgroundColor"&gt;$escapetool.xml($doc.displayPrettyName('backgroundColor', false, false))&lt;/label&gt; &lt;span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="$services.localization.render('xgallery.helper_bgcolor')"&gt;&lt;/span&gt;
           : $doc.display('backgroundColor')
         &lt;/div&gt;
       {{/html}}
@@ -67,7 +67,7 @@
     ####
     ##Display slide edit forms
     ###
-    #set($objects = $doc.getObjects('XCarouselCode.XCarouselSectionClass'))
+    #set($objects = $doc.getObjects('XGalleryCode.XGallerySectionClass'))
     (% id="sectionAcordion" %)
     (((
       (% class="listOfSlides" %)
@@ -83,7 +83,7 @@
           {{html}}&lt;input type="hidden" name="objects" value="1"/&gt;{{/html}}
             (% id="AjaxRemoveSlideTarget_${object.number}" class="RemoveTarget" data-objno="${object.number}" %)
             (((
-              {{html clean="false"}}&lt;input class="button RemoveSlide" type="button" value="$services.localization.render('xcarousel.slide_delete')"&gt;{{/html}}
+              {{html clean="false"}}&lt;input class="button RemoveSlide" type="button" value="$services.localization.render('xgallery.slide_delete')"&gt;{{/html}}
             )))
           )))
           (% class="slidePara" %)
@@ -92,7 +92,7 @@
           {{attachmentSelector classname="${class.name}" object="${object.number}" property="imageURL" savemode="form" displayImage="true" link="true" filter="png,jpg,gif,jpeg,svg" width="100px"/}}
           #foreach($prop in $class.properties)
             #if("$!{prop.name}" != 'imageURL')
-              ; $services.localization.render("xcarousel.slide_${prop.prettyName}")
+              ; $services.localization.render("xgallery.slide_${prop.prettyName}")
               : $doc.display($prop.getName(), $object)
             #end
           #end##end foreach class
@@ -109,7 +109,7 @@
     ####    
     {{html clean="false"}}
       &lt;div id="AjaxSlideTarget"&gt;
-        &lt;input class="button" type="button" id="GetNewSlide" value="$services.localization.render('xcarousel.slide_addSlide')"&gt;
+        &lt;input class="button" type="button" id="GetNewSlide" value="$services.localization.render('xgallery.slide_addSlide')"&gt;
       &lt;/div&gt;
     {{/html}}
     ####
@@ -119,8 +119,8 @@
     ####
     ##Display carousel
     ###
-    #set($carouselObject = $doc.getObject('XCarouselCode.XCarouselClass'))
-    #set($objects = $doc.getObjects('XCarouselCode.XCarouselSectionClass'))
+    #set($carouselObject = $doc.getObject('XGalleryCode.XGalleryClass'))
+    #set($objects = $doc.getObjects('XGalleryCode.XGallerySectionClass'))
     #set($interval = $!{carouselObject.getProperty('interval').value})
     #set($autoSliding = $!{carouselObject.getProperty('autoSliding').value})
     #set($carouselTitle = $doc.getDisplayTitle().replace(' ','_'))
@@ -132,7 +132,7 @@
     #end
 
     {{html}}
-      &lt;div id="carousel_${carouselTitle}" class="xcarousel carousel slide" data-ride="carousel" data-interval="$interval"&gt;
+      &lt;div id="carousel_${carouselTitle}" class="xgallery carousel slide" data-ride="carousel" data-interval="$interval"&gt;
         ## Indicators
         &lt;ol class="carousel-indicators"&gt;
         #foreach($object in $objects)
@@ -160,7 +160,7 @@
             #if("$!{escapetool.xml($!{object.getProperty('title').value})}" != '')
               #set($imageAlt = $escapetool.xml($!{object.getProperty('title').value}))
             #else
-              #set($imageAlt = $services.localization.render('xcarousel.image.imagealt'))
+              #set($imageAlt = $services.localization.render('xgallery.image.imagealt'))
             #end
             #if("$!{imageHeight}" != '' &amp;&amp; $velocityCount == 1)
               #set ($itemClass = "item active slide_${object.number} centerItem")
@@ -202,7 +202,7 @@
   #end
 {{/velocity}}</content>
   <object>
-    <name>XCarouselCode.XCarouselSheet</name>
+    <name>XGalleryCode.XGallerySheet</name>
     <number>0</number>
     <className>XWiki.JavaScriptExtension</className>
     <guid>c0a77a4a-eb52-4e82-9ec2-fa00dbddb64f</guid>
@@ -311,7 +311,7 @@
     </property>
   </object>
   <object>
-    <name>XCarouselCode.XCarouselSheet</name>
+    <name>XGalleryCode.XGallerySheet</name>
     <number>1</number>
     <className>XWiki.JavaScriptExtension</className>
     <guid>07063947-b9ef-499a-9366-16ba8d17f1eb</guid>
@@ -470,7 +470,7 @@ colorPikerOn();</code>
     </property>
   </object>
   <object>
-    <name>XCarouselCode.XCarouselSheet</name>
+    <name>XGalleryCode.XGallerySheet</name>
     <number>0</number>
     <className>XWiki.StyleSheetExtension</className>
     <guid>a73b6d35-7604-4039-a16e-c8ab6bb66152</guid>
@@ -669,7 +669,7 @@ colorPikerOn();</code>
     </property>
   </object>
   <object>
-    <name>XCarouselCode.XCarouselSheet</name>
+    <name>XGalleryCode.XGallerySheet</name>
     <number>1</number>
     <className>XWiki.StyleSheetExtension</className>
     <guid>5e7f4387-02dd-4292-9dac-a5b5b4730cea</guid>
@@ -789,7 +789,7 @@ colorPikerOn();</code>
     </property>
   </object>
   <object>
-    <name>XCarouselCode.XCarouselSheet</name>
+    <name>XGalleryCode.XGallerySheet</name>
     <number>2</number>
     <className>XWiki.StyleSheetExtension</className>
     <guid>d3c42c5d-972b-478c-8f12-f0e15d9602a1</guid>
@@ -884,14 +884,14 @@ colorPikerOn();</code>
       <cache>long</cache>
     </property>
     <property>
-      <code>#set($query = "from doc.object(XCarouselCode.XCarouselClass) as carousel where doc.space = 'XCarousel'")
+      <code>#set($query = "from doc.object(XGalleryCode.XGalleryClass) as carousel where doc.space = 'XGallery'")
 #set($results = $services.query.xwql($query).execute())
 
 #foreach($result in $results)
 
   #set($document = $xwiki.getDocument($result))
-  #set($carouselObj = $document.getObject('XCarouselCode.XCarouselClass'))
-  #set($slideObjects = $document.getObjects('XCarouselCode.XCarouselSectionClass'))
+  #set($carouselObj = $document.getObject('XGalleryCode.XGalleryClass'))
+  #set($slideObjects = $document.getObjects('XGalleryCode.XGallerySectionClass'))
 
   #set($carouselID = "#carousel_${document.getDisplayTitle().replace(' ','_')}")
   #set($carouselBGColor = "$!{carouselObj.getProperty('backgroundColor').value}")
@@ -966,7 +966,7 @@ colorPikerOn();</code>
     </property>
   </object>
   <object>
-    <name>XCarouselCode.XCarouselSheet</name>
+    <name>XGalleryCode.XGallerySheet</name>
     <number>3</number>
     <className>XWiki.StyleSheetExtension</className>
     <guid>3164b34f-c0f1-45bf-808e-f86aeaba1227</guid>
@@ -1096,7 +1096,7 @@ colorPikerOn();</code>
     </property>
   </object>
   <object>
-    <name>XCarouselCode.XCarouselSheet</name>
+    <name>XGalleryCode.XGallerySheet</name>
     <number>4</number>
     <className>XWiki.StyleSheetExtension</className>
     <guid>b7877327-bf09-4d67-afe6-601511b439ea</guid>
@@ -1191,20 +1191,20 @@ colorPikerOn();</code>
       <cache>long</cache>
     </property>
     <property>
-      <code>.xcarousel .carousel-inner{
+      <code>.xgallery .carousel-inner{
   position: relative;
   height: 100%;
 }
 
-.xcarousel .item &gt; img {
+.xgallery .item &gt; img {
   margin-left: auto;
   margin-right: auto;
 }
 
-.xcarousel .carousel-indicators li{
+.xgallery .carousel-indicators li{
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
-.xcarousel .carousel-caption, .xcarousel .carousel-indicators{
+.xgallery .carousel-caption, .xgallery .carousel-indicators{
   bottom: 5px;
 }</code>
     </property>
@@ -1222,7 +1222,7 @@ colorPikerOn();</code>
     </property>
   </object>
   <object>
-    <name>XCarouselCode.XCarouselSheet</name>
+    <name>XGalleryCode.XGallerySheet</name>
     <number>5</number>
     <className>XWiki.StyleSheetExtension</className>
     <guid>6082ee3f-a29e-4fdc-a30a-9b8964705515</guid>

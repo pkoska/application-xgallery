@@ -21,12 +21,12 @@
 -->
 
 <xwikidoc>
-  <web>XCarouselCode</web>
+  <web>XGalleryCode</web>
   <name>WebPreferences</name>
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
-  <parent>XCarousel.WebHome</parent>
+  <parent>XGallery.WebHome</parent>
   <creator>xwiki:XWiki.Admin</creator>
   <author>xwiki:XWiki.Admin</author>
   <customClass/>
@@ -108,7 +108,7 @@
         <classType>com.xpn.xwiki.objects.classes.UsersClass</classType>
       </users>
     </class>
-    <name>XCarouselCode.WebPreferences</name>
+    <name>XGalleryCode.WebPreferences</name>
     <number>0</number>
     <className>XWiki.XWikiGlobalRights</className>
     <guid>ee37c9ef-6895-45b0-9462-0e070fc91c72</guid>
@@ -1299,7 +1299,7 @@
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </xwiki.title.mandatory>
     </class>
-    <name>XCarouselCode.WebPreferences</name>
+    <name>XGalleryCode.WebPreferences</name>
     <number>0</number>
     <className>XWiki.XWikiPreferences</className>
     <guid>995faec6-7227-46fe-bd3d-5fe92b95df31</guid>
